@@ -14,6 +14,7 @@ def get_config():
     config_path = os.path.join(config_dir, 'gif-cli.json')
     with open(config_path) as config_file:
         config = json.load(config_file)
+        return config
 
 def run():
     search_string = ' '.join(sys.argv[1:])
