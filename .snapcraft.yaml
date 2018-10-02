@@ -1,0 +1,21 @@
+name: gif-cli
+version: 0.0.1
+summary: CLI tool to search for gifs
+description: |
+  CLI tool to search for gifs
+confinement: strict
+grade: stable
+
+apps:
+  marketo-monkey:
+    command: usr/bin/python3 -u $SNAP/bin/gif-cli
+    plugs: [network-bind, network]
+
+parts:
+  marketo-monkey:
+    plugin: python
+    source: .
+    python-packages:
+      - requests
+    prime:
+      - -install
