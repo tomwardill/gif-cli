@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='gif-cli',
-    version='0.0.1',
+    version='0.0.2',
     author='Tom Wardill',
     author_email='tom@howrandom.net',
     url="https://github.com/tomwardill/gif-cli",
