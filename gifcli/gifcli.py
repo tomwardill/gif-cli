@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import random
@@ -21,7 +22,13 @@ def get_config():
 
 
 def run():
-    search_string = " ".join(sys.argv[1:])
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("terms", nargs="+", help="Search terms")
+    args = parser.parse_args()
+
+    # Join all terms into a single string
+    search_string = " ".join(args.terms)
 
     config = get_config()
 
